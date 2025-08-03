@@ -1,11 +1,11 @@
 
-name: Report failed tests
+name: Report Failed Tests
 
 on:
   workflow_dispatch:
   push:
     paths:
-      - 'failed-tests.txt'
+      - "failed-tests.txt"
 
 permissions:
   issues: write
@@ -24,13 +24,9 @@ jobs:
           clean: false
           fetch-depth: 0
       
-      - name: Check file changes
-        id: check
+      - name: Gererate issue
+        id: generate
         run: |
-          if git diff --name-only HEAD~ | grep -q '^failed-tests.txt$'; then
-            echo "CHANGED=true" >> $GITHUB_OUTPUT
-          fi
-
           if [ ! -s "failed-tests.txt" ]; then
             echo "LABELS=ci succeeded" >> $GITHUB_OUTPUT
             echo "TITLE=$(date +'%Y %m %d') LLVM Test CI Successful" >> $GITHUB_OUTPUT
@@ -51,17 +47,17 @@ jobs:
             head -n100 ${FAILED_TESTS} >> $GITHUB_OUTPUT
             echo "EOF" >> $GITHUB_OUTPUT
           fi
+        
       
       - name: Create an issue
         id: issue
-        if: steps.check.outputs.CHANGED == 'true'
         uses: actions-cool/issues-helper@v3
         with:
           actions: 'create-issue'
           token:  ${{ secrets.CI_ISSUE_TOKEN }}
-          title:  ${{ steps.check.outputs.TITLE }}
-          body:   ${{ steps.check.outputs.BODY }}
-          labels: ${{ steps.check.outputs.LABELS }}
+          title:  ${{ steps.generate.outputs.TITLE }}
+          body:   ${{ steps.generate.outputs.BODY }}
+          labels: ${{ steps.generate.outputs.LABELS }}
 
       - name: Create comment
         id: comment

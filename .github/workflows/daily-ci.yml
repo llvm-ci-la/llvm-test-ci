@@ -1,4 +1,4 @@
-name: Daily LLVM test
+name: Daily CI
 
 on:
   workflow_dispatch:
