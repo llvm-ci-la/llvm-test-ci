@@ -12,6 +12,7 @@ cmake $LLVM_SOURCE_DIR/llvm \
   -DBUILD_SHARED_LIBS=true \
   -DLLVM_TARGETS_TO_BUILD=LoongArch \
   -DLLVM_ENABLE_PROJECTS="clang;flang;lld" \
+  -DLLVM_ENABLE_RUNTIMES=compiler-rt \
   -G Ninja 
 
 ninja -v
