@@ -61,7 +61,7 @@ jobs:
       - name: Run LLVM tests
         run: |
           cd ${BUILDS_DIR}/build-llvm
-          ./bin/llvm-lit test -v 2>&1 | tee -a ${LOG_FILE}
+          ninja check-llvm -j10 -v 2>&1 | tee -a ${LOG_FILE}
 
   test-suite:
     needs: llvm
