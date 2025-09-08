@@ -20,7 +20,7 @@ env:
 
 jobs:
   configure:
-    runs-on: [self-hosted, buildbot]
+    runs-on: [self-hosted, llvm-ci]
     steps:
       - uses: actions/checkout@v4
         with:
@@ -46,7 +46,7 @@ jobs:
   
   llvm:
     needs: configure
-    runs-on: [self-hosted, buildbot]
+    runs-on: [self-hosted, llvm-ci]
     steps:
       - name: Build LLVM Release mode
         run: |
@@ -65,7 +65,7 @@ jobs:
 
   test-suite:
     needs: llvm
-    runs-on: [self-hosted, buildbot]
+    runs-on: [self-hosted, llvm-ci]
     steps:
       - name: Build LLVM test suite LSX
         env: 
@@ -103,7 +103,7 @@ jobs:
   
   results:
     needs: test-suite
-    runs-on: [self-hosted, buildbot]
+    runs-on: [self-hosted, llvm-ci]
     steps:
       - name: Generate results
         id: check

@@ -16,7 +16,7 @@ env:
 
 jobs:
   report:
-    runs-on: [self-hosted, buildbot]
+    runs-on: [self-hosted, llvm-ci]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4

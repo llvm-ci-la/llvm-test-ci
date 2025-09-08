@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   results:
-    runs-on: [self-hosted, buildbot]
+    runs-on: [self-hosted, llvm-ci]
     steps:
       - name: Check failed tests
         id: check
