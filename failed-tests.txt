@@ -1,3 +1,27 @@
+Failed Tests (21):
+  lldb-shell :: Subprocess/clone-follow-child-wp.test
+  lldb-shell :: Subprocess/clone-follow-parent-wp.test
+  lldb-shell :: Subprocess/fork-follow-child-wp.test
+  lldb-shell :: Subprocess/fork-follow-parent-wp.test
+  lldb-shell :: Subprocess/vfork-follow-child-wp.test
+  lldb-shell :: Subprocess/vfork-follow-parent-wp.test
+  lldb-shell :: SymbolFile/DWARF/anon_class_w_and_wo_export_symbols.ll
+  lldb-shell :: SymbolFile/DWARF/clang-ast-from-dwarf-unamed-and-anon-structs.cpp
+  lldb-shell :: SymbolFile/DWARF/clang-gmodules-type-lookup.c
+  lldb-shell :: SymbolFile/DWARF/debug-types-expressions.test
+  lldb-shell :: SymbolFile/DWARF/dwarf5-lazy-dwo.c
+  lldb-shell :: SymbolFile/DWARF/dwo-debug-file-search-path-symlink-relative-compdir.c
+  lldb-shell :: SymbolFile/DWARF/dwo-debug-file-search-paths-dwoname-absolute-compdir.c
+  lldb-shell :: SymbolFile/DWARF/dwo-debug-file-search-paths-filename-only-absolute-compdir.c
+  lldb-shell :: SymbolFile/DWARF/dwo-debug-file-search-paths-filename-only-relative-compdir.c
+  lldb-shell :: SymbolFile/DWARF/dwo-debug-file-search-paths-relative-compdir.c
+  lldb-shell :: SymbolFile/DWARF/dwo-missing-error.test
+  lldb-shell :: SymbolFile/DWARF/dwo-relative-filename-only-binary-dir.c
+  lldb-shell :: SymbolFile/DWARF/dwo-static-data-member-access.test
+  lldb-shell :: SymbolFile/DWARF/split-dwarf-expression-eval-bug.cpp
+  lldb-shell :: Watchpoint/ExpressionLanguage.test
+
+
 Failed Tests (7):
   test-suite :: External/SPEC/CFP2017rate/503.bwaves_r/503.bwaves_r.test
   test-suite :: External/SPEC/CFP2017rate/521.wrf_r/521.wrf_r.test
