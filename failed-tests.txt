@@ -31,12 +31,14 @@ Failed Tests (6):
   test-suite :: External/SPEC/CFP2017speed/627.cam4_s/627.cam4_s.test
 
 
-Failed Tests (6):
+Failed Tests (8):
   test-suite :: External/SPEC/CFP2017rate/503.bwaves_r/503.bwaves_r.test
   test-suite :: External/SPEC/CFP2017rate/521.wrf_r/521.wrf_r.test
   test-suite :: External/SPEC/CFP2017rate/527.cam4_r/527.cam4_r.test
   test-suite :: External/SPEC/CFP2017speed/603.bwaves_s/603.bwaves_s.test
   test-suite :: External/SPEC/CFP2017speed/621.wrf_s/621.wrf_s.test
   test-suite :: External/SPEC/CFP2017speed/627.cam4_s/627.cam4_s.test
+  test-suite :: Fortran/UnitTests/finalization/specification_expression_finalization.test
+  test-suite :: MultiSource/Benchmarks/Prolangs-C/archie-client/archie.test
 
 
