@@ -9,8 +9,8 @@ cmake $TEST_SUITE_SOURCE_DIR \
   -DCMAKE_CXX_COMPILER=$BIN_DIR/clang++ \
   -DCMAKE_C_COMPILER=$BIN_DIR/clang \
   -DCMAKE_Fortran_COMPILER=$BIN_DIR/flang \
-  -DCMAKE_C_FLAGS="$FLAG -Wno-implicit-int -fuse-ld=$BIN_DIR/ld.lld" \
-  -DCMAKE_CXX_FLAGS="$FLAG -Wno-implicit-int -fuse-ld=$BIN_DIR/ld.lld" \
+  -DCMAKE_C_FLAGS="$FLAG" \
+  -DCMAKE_CXX_FLAGS="$FLAG" \
   -DCMAKE_Fortran_FLAGS="$FLAG" \
   -C$TEST_SUITE_SOURCE_DIR/cmake/caches/O3.cmake \
   -DTEST_SUITE_SPEC2006_ROOT=$CPU2006_DIR \
@@ -19,7 +19,6 @@ cmake $TEST_SUITE_SOURCE_DIR \
   -DTEST_SUITE_RUN_TYPE=train \
   -LAH -DCMAKE_VERBOSE_MAKEFILE=ON \
   -DCMAKE_BUILD_TYPE=Release \
-  -DTEST_SUITE_USE_PERF=ON \
   -G Ninja
 
 ninja -v 
