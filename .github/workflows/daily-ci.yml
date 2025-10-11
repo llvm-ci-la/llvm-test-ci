@@ -82,8 +82,7 @@ jobs:
       - name: Run LLVM test suite LSX
         run: |
           cd ${BUILDS_DIR}/build-test-suite-lsx
-          ulimit -s unlimited
-          ${BUILDS_DIR}/build-llvm/bin/llvm-lit . -v 2>&1 | tee -a ${LOG_FILE}
+          sh scripts/run-test-suite 2>&1 | tee -a ${LOG_FILE}
           
       - name: Build LLVM test suite LASX
         env: 
@@ -100,8 +99,7 @@ jobs:
       - name: Run LLVM test suite LASX
         run: |
           cd ${BUILDS_DIR}/build-test-suite-lasx
-          ulimit -s unlimited
-          ${BUILDS_DIR}/build-llvm/bin/llvm-lit . -v 2>&1 | tee -a ${LOG_FILE}
+          sh scripts/run-test-suite 2>&1 | tee -a ${LOG_FILE}
   
   results:
     needs: test-suite
