@@ -1,4 +1,4 @@
-Failed Tests (21):
+Failed Tests (22):
   lldb-shell :: Subprocess/clone-follow-child-wp.test
   lldb-shell :: Subprocess/clone-follow-parent-wp.test
   lldb-shell :: Subprocess/fork-follow-child-wp.test
@@ -19,6 +19,7 @@ Failed Tests (21):
   lldb-shell :: SymbolFile/DWARF/dwo-relative-filename-only-binary-dir.c
   lldb-shell :: SymbolFile/DWARF/dwo-static-data-member-access.test
   lldb-shell :: SymbolFile/DWARF/split-dwarf-expression-eval-bug.cpp
+  lldb-shell :: SymbolFile/NativePDB/simple-types.cpp
   lldb-shell :: Watchpoint/ExpressionLanguage.test
 
 
