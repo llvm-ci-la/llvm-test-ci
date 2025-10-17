@@ -80,9 +80,11 @@ jobs:
           fi
 
       - name: Run LLVM test suite LSX
+        env: 
+          BUILD_DIR: build-test-suite-lsx
         run: |
-          cd ${BUILDS_DIR}/build-test-suite-lsx
-          sh scripts/run-test-suite 2>&1 | tee -a ${LOG_FILE}
+          cd ${WORKSPACE}
+          sh scripts/run-test-suite.sh 2>&1 | tee -a ${LOG_FILE}
           
       - name: Build LLVM test suite LASX
         env: 
@@ -97,9 +99,11 @@ jobs:
           fi
 
       - name: Run LLVM test suite LASX
+        env: 
+          BUILD_DIR: build-test-suite-lasx
         run: |
-          cd ${BUILDS_DIR}/build-test-suite-lasx
-          sh scripts/run-test-suite 2>&1 | tee -a ${LOG_FILE}
+          cd ${WORKSPACE}
+          sh scripts/run-test-suite.sh 2>&1 | tee -a ${LOG_FILE}
   
   results:
     needs: test-suite
