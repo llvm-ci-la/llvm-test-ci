@@ -1,4 +1,5 @@
-Failed Tests (22):
+Failed Tests (23):
+  lldb-shell :: ObjectFile/MachO/section-overflow-binary.test
   lldb-shell :: Subprocess/clone-follow-child-wp.test
   lldb-shell :: Subprocess/clone-follow-parent-wp.test
   lldb-shell :: Subprocess/fork-follow-child-wp.test
